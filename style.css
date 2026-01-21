@@ -948,6 +948,81 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
 
+    /* Hero Section Mobile Fixes */
+    .hero {
+        text-align: center;
+        padding-top: 4rem;
+        /* Prevent cutting off at top if navbar exists or just general spacing */
+    }
+
+    .hero-content {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: center;
+        /* Center buttons */
+        gap: 1.5rem;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .partners-wrapper {
+        justify-content: center;
+        /* Center partners */
+    }
+
+    /* Workshop Details: Image First */
+    .details .grid-2 {
+        display: flex;
+        flex-direction: column-reverse;
+        /* Image (2nd in HTML) becomes top, Content (1st) bottom */
+    }
+
+    .details-image {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    /* Contest Section: Image First */
+    /* HTML order is Image(160), Content(163). */
+    /* Previous CSS might have forced reorder. We want Image First. */
+    /* Natural HTML order is Image First. So we just need column direction. */
+    .contest .grid-2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Override the specific helper classes if they exist causing issues */
+    .order-mobile-1,
+    .order-mobile-2 {
+        order: unset !important;
+    }
+
+    /* Footer Cleanup */
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+        align-items: center;
+        /* Ensure center alignment */
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center !important;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    /* General Grid adjustments */
     .grid-2,
     .form-row {
         grid-template-columns: 1fr;
@@ -963,15 +1038,8 @@ footer {
         order: -1;
     }
 
-    .hero-cta-group {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
     nav {
         display: none;
-        /* Mobile menu can be added later */
     }
 
     .form-wrapper {
