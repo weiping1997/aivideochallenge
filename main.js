@@ -56,7 +56,7 @@ function initForm() {
     }
 
     // TODO: REPLACE THIS WITH YOUR GOOGLE APPS SCRIPT WEB APP URL
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxrqGTYeB3e5QxRcVZFWIzMgBgC99_DNWyx9kxTDklUG8-jSp3r9qLbPtjtpmTgbbOh/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyWungkuYsP-NkONUcD5hk43GGFq9pR8Kf_NR-PTIIduM41sHbqN57s0EI3bCxFakFm/exec';
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
