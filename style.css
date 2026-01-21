@@ -926,23 +926,22 @@ select:focus {
 footer {
     padding: 4rem 0;
     border-top: 1px solid var(--glass-border);
+    text-align: center;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
-.footer-links {
-    display: flex;
-    gap: 2rem;
+.footer-contact {
+    color: var(--text-muted);
+    font-size: 1rem;
 }
 
-.footer-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 0.8rem;
+.mobile-block {
+    display: inline;
 }
 
 /* Responsive */
@@ -1023,44 +1022,14 @@ footer {
     }
 
     /* Footer Cleanup */
-    .footer-content {
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-        align-items: center;
-    }
-
-    /* Hide Logos */
-    .footer-info .logo-group {
-        display: none;
-    }
-
-    /* Reorder: Links First */
-    .footer-links {
-        flex-direction: column;
-        align-items: center !important;
-        gap: 0.5rem;
-        width: 100%;
-        order: 1;
-    }
-
-    /* Bigger Fonts for Links */
-    .footer-links a,
-    .footer-links span {
-        font-size: 1rem !important;
-        color: var(--text-main) !important;
+    .mobile-block {
+        display: block;
+        /* Forces new line on mobile */
+        margin-top: 0.5rem;
+        font-size: 1.1rem;
+        /* Slightly larger for readability */
+        color: var(--text-main);
         font-weight: 500;
-    }
-
-    /* Copyright Last */
-    .footer-info {
-        order: 2;
-        width: 100%;
-    }
-
-    .footer-info p {
-        font-size: 0.8rem;
-        opacity: 0.7;
     }
 
     /* General Grid adjustments */
